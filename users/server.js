@@ -8,6 +8,8 @@ app.use('/graphql', expressGraphQL({
     graphiql: true
 }))
 
-app.listen( 4000, () => {
-    console.log("Escuchando...");
+const port = 4000;
+app.listen( port, () => {
+    console.log(`Escuchando...`);
+    console.log(`GraphQL -> http://localhost:${port}/graphql`);
 });
